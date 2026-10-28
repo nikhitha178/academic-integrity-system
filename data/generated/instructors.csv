@@ -1,0 +1,11 @@
+instructor_id,user_id,full_name,department
+INS-000001,USR-000104,Professor 000001,Data Science
+INS-000002,USR-000105,Professor 000002,Electrical Engineering
+INS-000003,USR-000106,Professor 000003,Mechanical Engineering
+INS-000004,USR-000107,Professor 000004,Business Analytics
+INS-000005,USR-000108,Professor 000005,Health Informatics
+INS-000006,USR-000109,Professor 000006,Computer Science
+INS-000007,USR-000110,Professor 000007,Data Science
+INS-000008,USR-000111,Professor 000008,Electrical Engineering
+INS-000009,USR-000112,Professor 000009,Mechanical Engineering
+INS-000010,USR-000113,Professor 000010,Business Analytics

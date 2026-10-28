@@ -1,0 +1,11 @@
+reviewer_id,user_id,full_name,department,specialization
+REV-000001,USR-000114,Case Reviewer 000001,Data Science,Data Science Ethics
+REV-000002,USR-000115,Case Reviewer 000002,Electrical Engineering,Electrical Engineering Ethics
+REV-000003,USR-000116,Case Reviewer 000003,Mechanical Engineering,Mechanical Engineering Ethics
+REV-000004,USR-000117,Case Reviewer 000004,Business Analytics,Business Analytics Ethics
+REV-000005,USR-000118,Case Reviewer 000005,Health Informatics,Health Informatics Ethics
+REV-000006,USR-000119,Case Reviewer 000006,Computer Science,Computer Science Ethics
+REV-000007,USR-000120,Case Reviewer 000007,Data Science,Data Science Ethics
+REV-IND-000001,USR-000121,Independent Appeal Reviewer 000001,Data Science,Appeals Adjudication
+REV-IND-000002,USR-000122,Independent Appeal Reviewer 000002,Electrical Engineering,Appeals Adjudication
+REV-IND-000003,USR-000123,Independent Appeal Reviewer 000003,Mechanical Engineering,Appeals Adjudication

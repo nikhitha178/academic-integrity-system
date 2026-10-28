@@ -1,0 +1,61 @@
+{
+  "artifact_checksums": {
+    "generated/appeals.csv": "fd979b8fae32125ecbb494fe7df528e17c5f2134651394f4561993f86084425d",
+    "generated/assessments.csv": "bf13fb7f73840cea6acb588576282ac05cb94c45998fda50e0b45a3cf0b4d877",
+    "generated/audit_events.csv": "ba106528aedc3610cf89f8d0ff6b2f8b3a727ad7a456b30b901bc6d9effac3b6",
+    "generated/cases.csv": "7ef4ca4e1ac203c443da7aaa465f98cbe83397a106f25ef0578ad4f612a7662b",
+    "generated/decisions.csv": "20bc756c8483f502b8a126f1dcf0b703bffdcff4f92511b0c8620ff7fb7f3ac2",
+    "generated/evidence.csv": "e5d891edd40994f02cb97c277d5370fcc48410d999f00ae2b6a38944c61e20dc",
+    "generated/instructors.csv": "27deb1344b773252c7a22b353c733ee9645b6450b099dc9c5b0242b436967543",
+    "generated/learners.csv": "323094fff586cf7a8c9cc82dfc46d9f8ccad2453230240e80a76e8c1c1a8c4df",
+    "generated/reviewer_assignments.csv": "89e4a4b44c33a3a56198a4a0b866e92813b1813de97852f2f0508e371f1db6de",
+    "generated/reviewers.csv": "65969d50d110f9975b815b0dd27a74251cf3b8347bbad79066391685e1ebff70",
+    "generated/similarity_flags.csv": "54b8fa09d0364cf4a225393f125688f92aae954cae71a7d728990ceba787f92b",
+    "generated/similarity_reports.csv": "2be183f7a849ac0d2f0717042fc53426687a9ef935ac99f7a2a451aa8ef9ccfe",
+    "generated/submissions.csv": "84247d62ceb1073bb36168b3de2a9c673fcc2728e0ce3b89306f8836ffa10fa9",
+    "generated/users.csv": "1215b6aaedf2f9bcfabbd30ea09ce5c738158df775c1528a555ed05015e662a5",
+    "ground_truth/ground_truth.csv": "ee342b9dc81cac6ba4aaf7fdf9212ac365e75225f1d63b31c6ca950ecfa2187b",
+    "validation/validation_summary.json": "9161e94535aded4d4a21bc2ab7dfa1f40a21265a193c680fe584b54a885b7b82"
+  },
+  "ground_truth_table": "ground_truth",
+  "operational_tables": [
+    "appeals",
+    "assessments",
+    "audit_events",
+    "cases",
+    "decisions",
+    "evidence",
+    "instructors",
+    "learners",
+    "reviewer_assignments",
+    "reviewers",
+    "similarity_flags",
+    "similarity_reports",
+    "submissions",
+    "users"
+  ],
+  "profile": "starter",
+  "row_counts": {
+    "appeals": 7,
+    "assessments": 10,
+    "audit_events": 15,
+    "cases": 15,
+    "decisions": 8,
+    "evidence": 15,
+    "ground_truth": 500,
+    "instructors": 10,
+    "learners": 100,
+    "reviewer_assignments": 15,
+    "reviewers": 10,
+    "similarity_flags": 50,
+    "similarity_reports": 500,
+    "submissions": 500,
+    "users": 123
+  },
+  "seed": 20261022,
+  "source_paths": {
+    "generated_dir": "data/generated",
+    "ground_truth_dir": "data/ground_truth",
+    "validation_dir": "data/validation"
+  }
+}

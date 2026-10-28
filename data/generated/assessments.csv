@@ -1,0 +1,11 @@
+assessment_id,title,course_code,created_by_instructor_id,max_score,due_date
+ASM-000001,Assessment 000001 - Data Science Assignment,DAT-101,INS-000001,100.0,2026-01-30T08:00:00+00:00
+ASM-000002,Assessment 000002 - Electrical Engineering Assignment,ELE-102,INS-000002,100.0,2026-01-31T08:00:00+00:00
+ASM-000003,Assessment 000003 - Mechanical Engineering Assignment,MEC-103,INS-000003,100.0,2026-02-01T08:00:00+00:00
+ASM-000004,Assessment 000004 - Business Analytics Assignment,BUS-104,INS-000004,100.0,2026-02-02T08:00:00+00:00
+ASM-000005,Assessment 000005 - Health Informatics Assignment,HEA-105,INS-000005,100.0,2026-02-03T08:00:00+00:00
+ASM-000006,Assessment 000006 - Computer Science Assignment,COM-106,INS-000006,100.0,2026-02-04T08:00:00+00:00
+ASM-000007,Assessment 000007 - Data Science Assignment,DAT-107,INS-000007,100.0,2026-02-05T08:00:00+00:00
+ASM-000008,Assessment 000008 - Electrical Engineering Assignment,ELE-108,INS-000008,100.0,2026-02-06T08:00:00+00:00
+ASM-000009,Assessment 000009 - Mechanical Engineering Assignment,MEC-109,INS-000009,100.0,2026-02-07T08:00:00+00:00
+ASM-000010,Assessment 000010 - Business Analytics Assignment,BUS-110,INS-000010,100.0,2026-01-29T08:00:00+00:00

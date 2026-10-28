@@ -1,0 +1,124 @@
+user_id,username,email,role,is_active,created_at
+USR-000001,admin_user_01,admin_user_01@academic.edu,Academic Administrator,true,2025-09-17T08:00:00+00:00
+USR-000002,support_user_01,support_user_01@academic.edu,Support Staff,true,2025-09-17T08:00:00+00:00
+USR-000003,platform_admin_01,platform_admin_01@academic.edu,Platform Administrator,true,2025-09-17T08:00:00+00:00
+USR-000004,learner_000001,learner_000001@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000005,learner_000002,learner_000002@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000006,learner_000003,learner_000003@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000007,learner_000004,learner_000004@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000008,learner_000005,learner_000005@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000009,learner_000006,learner_000006@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000010,learner_000007,learner_000007@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000011,learner_000008,learner_000008@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000012,learner_000009,learner_000009@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000013,learner_000010,learner_000010@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000014,learner_000011,learner_000011@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000015,learner_000012,learner_000012@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000016,learner_000013,learner_000013@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000017,learner_000014,learner_000014@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000018,learner_000015,learner_000015@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000019,learner_000016,learner_000016@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000020,learner_000017,learner_000017@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000021,learner_000018,learner_000018@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000022,learner_000019,learner_000019@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000023,learner_000020,learner_000020@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000024,learner_000021,learner_000021@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000025,learner_000022,learner_000022@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000026,learner_000023,learner_000023@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000027,learner_000024,learner_000024@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000028,learner_000025,learner_000025@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000029,learner_000026,learner_000026@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000030,learner_000027,learner_000027@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000031,learner_000028,learner_000028@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000032,learner_000029,learner_000029@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000033,learner_000030,learner_000030@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000034,learner_000031,learner_000031@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000035,learner_000032,learner_000032@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000036,learner_000033,learner_000033@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000037,learner_000034,learner_000034@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000038,learner_000035,learner_000035@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000039,learner_000036,learner_000036@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000040,learner_000037,learner_000037@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000041,learner_000038,learner_000038@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000042,learner_000039,learner_000039@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000043,learner_000040,learner_000040@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000044,learner_000041,learner_000041@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000045,learner_000042,learner_000042@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000046,learner_000043,learner_000043@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000047,learner_000044,learner_000044@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000048,learner_000045,learner_000045@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000049,learner_000046,learner_000046@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000050,learner_000047,learner_000047@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000051,learner_000048,learner_000048@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000052,learner_000049,learner_000049@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000053,learner_000050,learner_000050@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000054,learner_000051,learner_000051@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000055,learner_000052,learner_000052@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000056,learner_000053,learner_000053@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000057,learner_000054,learner_000054@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000058,learner_000055,learner_000055@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000059,learner_000056,learner_000056@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000060,learner_000057,learner_000057@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000061,learner_000058,learner_000058@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000062,learner_000059,learner_000059@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000063,learner_000060,learner_000060@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000064,learner_000061,learner_000061@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000065,learner_000062,learner_000062@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000066,learner_000063,learner_000063@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000067,learner_000064,learner_000064@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000068,learner_000065,learner_000065@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000069,learner_000066,learner_000066@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000070,learner_000067,learner_000067@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000071,learner_000068,learner_000068@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000072,learner_000069,learner_000069@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000073,learner_000070,learner_000070@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000074,learner_000071,learner_000071@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000075,learner_000072,learner_000072@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000076,learner_000073,learner_000073@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000077,learner_000074,learner_000074@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000078,learner_000075,learner_000075@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000079,learner_000076,learner_000076@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000080,learner_000077,learner_000077@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000081,learner_000078,learner_000078@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000082,learner_000079,learner_000079@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000083,learner_000080,learner_000080@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000084,learner_000081,learner_000081@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000085,learner_000082,learner_000082@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000086,learner_000083,learner_000083@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000087,learner_000084,learner_000084@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000088,learner_000085,learner_000085@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000089,learner_000086,learner_000086@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000090,learner_000087,learner_000087@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000091,learner_000088,learner_000088@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000092,learner_000089,learner_000089@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000093,learner_000090,learner_000090@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000094,learner_000091,learner_000091@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000095,learner_000092,learner_000092@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000096,learner_000093,learner_000093@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000097,learner_000094,learner_000094@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000098,learner_000095,learner_000095@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000099,learner_000096,learner_000096@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000100,learner_000097,learner_000097@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000101,learner_000098,learner_000098@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000102,learner_000099,learner_000099@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000103,learner_000100,learner_000100@academic.edu,Learner,true,2025-12-16T08:00:00+00:00
+USR-000104,instructor_000001,instructor_000001@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000105,instructor_000002,instructor_000002@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000106,instructor_000003,instructor_000003@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000107,instructor_000004,instructor_000004@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000108,instructor_000005,instructor_000005@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000109,instructor_000006,instructor_000006@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000110,instructor_000007,instructor_000007@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000111,instructor_000008,instructor_000008@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000112,instructor_000009,instructor_000009@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000113,instructor_000010,instructor_000010@academic.edu,Instructor,true,2025-11-16T08:00:00+00:00
+USR-000114,reviewer_000001,reviewer_000001@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000115,reviewer_000002,reviewer_000002@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000116,reviewer_000003,reviewer_000003@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000117,reviewer_000004,reviewer_000004@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000118,reviewer_000005,reviewer_000005@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000119,reviewer_000006,reviewer_000006@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000120,reviewer_000007,reviewer_000007@academic.edu,Case Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000121,ind_reviewer_000001,ind_reviewer_000001@academic.edu,Independent Appeal Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000122,ind_reviewer_000002,ind_reviewer_000002@academic.edu,Independent Appeal Reviewer,true,2025-11-16T08:00:00+00:00
+USR-000123,ind_reviewer_000003,ind_reviewer_000003@academic.edu,Independent Appeal Reviewer,true,2025-11-16T08:00:00+00:00

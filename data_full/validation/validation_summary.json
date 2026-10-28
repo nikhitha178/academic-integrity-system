@@ -1,0 +1,91 @@
+{
+  "checks": [
+    "exact counts",
+    "primary keys",
+    "foreign keys",
+    "unique pairs per algorithm version",
+    "re-scan integrity",
+    "flag thresholds/severity",
+    "role coverage",
+    "lifecycle/cardinality",
+    "reviewer independence",
+    "ground-truth consistency/isolation"
+  ],
+  "counts": {
+    "appeals": 115,
+    "assessments": 100,
+    "audit_events": 300,
+    "cases": 300,
+    "decisions": 203,
+    "evidence": 300,
+    "ground_truth": 10300,
+    "instructors": 50,
+    "learners": 3000,
+    "reviewer_assignments": 300,
+    "reviewers": 30,
+    "similarity_flags": 1000,
+    "similarity_reports": 10300,
+    "submissions": 10000,
+    "users": 3083
+  },
+  "data_dictionary": {
+    "cases": "Formal case records with UNDER_INVESTIGATION, DECIDED, APPEALED, or CLOSED lifecycle states.",
+    "content_fingerprint": "Deterministic identifier for synthetic placeholder content; not a hash of a persisted submission file.",
+    "ground_truth": {
+      "columns": {
+        "is_synthetic_plagiarism": "Synthetic benchmark boolean label stored as true/false text",
+        "report_id": "Corresponding operational similarity report ID",
+        "synthetic_case_outcome": "Synthetic benchmark outcome category",
+        "synthetic_pair_relationship": "Synthetic benchmark relationship category"
+      },
+      "description": "Benchmark-only labels; never included in operational CSVs and never inferred from similarity scores.",
+      "file": "data_full/ground_truth/ground_truth.csv",
+      "policy": {
+        "CITATIONS_EXCLUDED": [
+          "NO_VIOLATION",
+          "false"
+        ],
+        "COLLABORATION": [
+          "SERIOUS_VIOLATION or WARNING",
+          "true"
+        ],
+        "DIRECT_COPY": [
+          "SERIOUS_VIOLATION",
+          "true"
+        ],
+        "ORIGINAL": [
+          "NO_VIOLATION",
+          "false"
+        ],
+        "TEMPLATED_CODE": [
+          "WARNING or NO_VIOLATION",
+          "true or false"
+        ]
+      }
+    },
+    "similarity_flags": "Flags selected only from reports with similarity score >= 15%; HIGH at >= 30%, otherwise MEDIUM.",
+    "similarity_reports": "Pairwise screening reports. Similarity scores are signals for human review, not findings of misconduct."
+  },
+  "errors": [],
+  "file_checksums": {
+    "generated/appeals.csv": "6ec2d737f5b9659932babf6ab95a14695703aa232aff032ad4514df02ba14e2a",
+    "generated/assessments.csv": "fd76d7c026585997f5f903bb5e9719fb368116946ff694c8b0bb98f8434041f3",
+    "generated/audit_events.csv": "a2150a324714f167ff367964d00a32b19e671ab2559ca9c23b684ee853dc200c",
+    "generated/cases.csv": "9554237187bb077357fd3cef8cab20955c88e46b09c810adfd8a93cb2b5ce021",
+    "generated/decisions.csv": "248a88cc8625e29eb079f1037754b13a0f62949e29e030753114d596109660f5",
+    "generated/evidence.csv": "80c397617aebd16437e6b6a066007616b5bb5f6881f7e507b744159b1159e7c4",
+    "generated/instructors.csv": "19e623c1e342989c623fa176c11b1845e0d7d38d256c82ce9accaa9beebb7800",
+    "generated/learners.csv": "93b5ea79f8c92f4e0325568e44711232685de055f822b63abe7b58e0cfafbb6c",
+    "generated/reviewer_assignments.csv": "d63d2a1696d1f9de3b78adf9930f55b497cf2ac39855d19a2a0418182df85764",
+    "generated/reviewers.csv": "71109454323b0acbad708e9c7658316d15c1c6e4b842c608d632e90d32369ba8",
+    "generated/similarity_flags.csv": "18b75a41f97e0a6d2bbe5272135eaaa39edc2a1e69e2056466900c9d166aa07b",
+    "generated/similarity_reports.csv": "162de75d78daaee2a4aa9c501e9a0148e6c2be55a82cb3fe62adb33ab308ba43",
+    "generated/submissions.csv": "ef53ff7105572eb5b371db8234e359be104ca2982b3a65b08bedbbf7bd86ac5d",
+    "generated/users.csv": "071d171a137cf16271ff2e509eb53ed8098442ad47ac73878b0bc6652c7e3f8d",
+    "ground_truth/ground_truth.csv": "2d863306f0e2e33f6766cd81861201c9485e255a068e6cd515e396e364e9e3ce"
+  },
+  "passed_all_checks": true,
+  "profile": "custom",
+  "seed": 20261022,
+  "status": "SUCCESS"
+}

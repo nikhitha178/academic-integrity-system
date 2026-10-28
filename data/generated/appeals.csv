@@ -1,0 +1,8 @@
+appeal_id,case_id,decision_id,independent_reviewer_id,appeal_reason,appeal_status,submitted_at,review_completed_at,review_outcome
+APL-000002,CAS-000002,DEC-000002,REV-IND-000002,Disputing findings based on shared course-template code.,CLOSED,2026-02-04T19:15:00+00:00,2026-02-06T19:15:00+00:00,UPHELD
+APL-000003,CAS-000003,DEC-000003,REV-IND-000003,Disputing findings based on shared course-template code.,CLOSED,2026-02-11T07:15:00+00:00,2026-02-13T07:15:00+00:00,UPHELD
+APL-000008,CAS-000008,DEC-000008,REV-IND-000002,Disputing findings based on shared course-template code.,UNDER_INDEPENDENT_REVIEW,2026-02-02T17:15:00+00:00,,
+APL-000010,CAS-000010,DEC-000010,REV-IND-000001,Disputing findings based on shared course-template code.,CLOSED,2026-02-06T05:15:00+00:00,2026-02-08T05:15:00+00:00,UPHELD
+APL-000013,CAS-000013,DEC-000013,REV-IND-000001,Disputing findings based on shared course-template code.,UNDER_INDEPENDENT_REVIEW,2026-02-01T13:15:00+00:00,,
+APL-000014,CAS-000014,DEC-000014,REV-IND-000002,Disputing findings based on shared course-template code.,UNDER_INDEPENDENT_REVIEW,2026-02-07T20:15:00+00:00,,
+APL-000015,CAS-000015,DEC-000015,REV-IND-000003,Disputing findings based on shared course-template code.,CLOSED,2026-02-11T10:15:00+00:00,2026-02-13T10:15:00+00:00,OVERTURNED
