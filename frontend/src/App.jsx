@@ -19,12 +19,41 @@ function readableStatus(status = '') {
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+
+  const roles = [
+    {
+      value: 'Academic Administrator',
+      label: 'Academic Administrator',
+      description: 'Manage cases and reviewer assignments',
+      icon: '🛡️',
+    },
+    {
+      value: 'Case Reviewer',
+      label: 'Case Reviewer',
+      description: 'Review assigned cases and evidence',
+      icon: '📋',
+    },
+    {
+      value: 'Independent Appeal Reviewer',
+      label: 'Independent Appeal Reviewer',
+      description: 'Review appeals independently',
+      icon: '⚖️',
+    },
+  ];
 
   async function handleSubmit(event) {
     event.preventDefault();
     setError('');
+
+    if (!role) {
+      setError('Please select your account type.');
+      return;
+    }
+
     setBusy(true);
 
     try {
@@ -37,7 +66,7 @@ function Login({ onLogin }) {
         throw new Error('The server did not return an access token.');
       }
 
-      onLogin(result.access_token);
+      onLogin(result.access_token, role);
     } catch (err) {
       setError(err.message || 'Login failed. Please try again.');
     } finally {
@@ -51,27 +80,62 @@ function Login({ onLogin }) {
         <div className="brand-mark">AI</div>
         <p className="eyebrow">ACADEMIC INTEGRITY</p>
         <h1>Case Management System</h1>
+
         <p className="intro-copy">
           A centralized workspace for managing academic integrity cases
-          and supporting a fair, accountable review process.
+          and supporting a fair, transparent, and accountable review process.
         </p>
+
         <div className="login-note">
           <span className="status-dot" />
-          Secure administrator access
+          Secure, role-based access
         </div>
       </section>
 
       <section className="login-panel">
         <div className="panel-heading">
           <p className="eyebrow">WELCOME BACK</p>
-          <h2>Administrator sign in</h2>
-          <p>Sign in with your existing system account.</p>
+          <h2>Sign in to your workspace</h2>
+          <p>Select your account type and enter your system credentials.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
+          <fieldset className="role-fieldset">
+            <legend>Which workspace do you use?</legend>
+
+            <div className="role-options">
+              {roles.map(item => (
+                <label
+                  key={item.value}
+                  className={`role-option ${role === item.value ? 'role-option-selected' : ''
+                    }`}
+                >
+                  <input
+                    type="radio"
+                    name="accountRole"
+                    value={item.value}
+                    checked={role === item.value}
+                    onChange={() => setRole(item.value)}
+                    required
+                  />
+
+                  <span className="role-option-icon" aria-hidden="true">
+                    {item.icon}
+                  </span>
+
+                  <span className="role-option-content">
+                    <strong>{item.label}</strong>
+                    <span>{item.description}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
           <label htmlFor="username">Username</label>
           <input
             id="username"
+            name="username"
             autoComplete="username"
             value={username}
             onChange={event => setUsername(event.target.value)}
@@ -80,24 +144,49 @@ function Login({ onLogin }) {
           />
 
           <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            autoComplete="current-password"
-            value={password}
-            onChange={event => setPassword(event.target.value)}
-            placeholder="Enter your password"
-            required
-          />
 
-          {error && <div className="alert alert-error" role="alert">{error}</div>}
+          <div className="password-field">
+            <input
+              id="password"
+              name="password"
+              type={showPassword ? 'text' : 'password'}
+              autoComplete="current-password"
+              value={password}
+              onChange={event => setPassword(event.target.value)}
+              placeholder="Enter your password"
+              required
+            />
 
-          <button className="primary-button login-button" disabled={busy}>
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setShowPassword(value => !value)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+          </div>
+
+          {error && (
+            <div className="alert alert-error" role="alert">
+              {error}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            className="primary-button login-button"
+            disabled={busy}
+          >
             {busy ? 'Signing in…' : 'Sign in securely'}
             {!busy && <span aria-hidden="true"> →</span>}
           </button>
         </form>
-        <p className="login-footnote">Access is controlled by your assigned system role.</p>
+
+        <p className="login-footnote">
+          Your account permissions are verified securely by the system.
+          Selecting a workspace does not change your assigned role.
+        </p>
       </section>
     </main>
   );
@@ -752,6 +841,7 @@ function App() {
 
   const logout = useCallback(() => {
     sessionStorage.removeItem('academic_integrity_token');
+    sessionStorage.removeItem('academic_integrity_selected_role');
     setToken(null);
     setUser(null);
     setAuthError('');
@@ -771,19 +861,31 @@ function App() {
 
       try {
         const currentUser = await apiRequest('/auth/me', {}, token);
-
-        if (![
+        const allowedRoles = [
           'Academic Administrator',
           'Case Reviewer',
           'Independent Appeal Reviewer',
-        ].includes(currentUser.role)) {
+        ];
+
+        if (!allowedRoles.includes(currentUser.role)) {
           throw new Error('This workspace is not available for your account role.');
+        }
+
+        const selectedRole = sessionStorage.getItem(
+          'academic_integrity_selected_role'
+        );
+
+        if (selectedRole && selectedRole !== currentUser.role) {
+          throw new Error(
+            `You selected ${selectedRole}, but this account is assigned to ${currentUser.role}. Please sign in again and select the correct workspace.`
+          );
         }
 
         if (!cancelled) setUser(currentUser);
       } catch (err) {
         if (!cancelled) {
           sessionStorage.removeItem('academic_integrity_token');
+          sessionStorage.removeItem('academic_integrity_selected_role');
           setToken(null);
           setUser(null);
           setAuthError(err.message || 'Your session has expired. Please sign in again.');
@@ -797,13 +899,14 @@ function App() {
     return () => { cancelled = true; };
   }, [token]);
 
-  function handleLogin(accessToken) {
+  function handleLogin(accessToken, selectedRole) {
     sessionStorage.setItem('academic_integrity_token', accessToken);
+    sessionStorage.setItem('academic_integrity_selected_role', selectedRole);
+
     setAuthError('');
     setUser(null);
     setToken(accessToken);
   }
-
   if (checking) {
     return <main className="loading-screen"><div className="loading-mark">AI</div><p>Verifying administrator session…</p></main>;
   }

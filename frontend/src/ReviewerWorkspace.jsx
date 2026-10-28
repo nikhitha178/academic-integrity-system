@@ -153,17 +153,8 @@ export default function ReviewerWorkspace({ token, user, onLogout }) {
   };
 
   return (
-    <main style={pageStyle}>
-      <header
-        style={{
-          ...panelStyle,
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '16px',
-          flexWrap: 'wrap',
-        }}
-      >
+    <main className="reviewer-workspace">
+      <header className="reviewer-header reviewer-panel">
         <div>
           <h1 style={{ margin: '0 0 6px' }}>Reviewer Workspace</h1>
           <p style={{ margin: 0, color: '#64748b' }}>
@@ -171,38 +162,42 @@ export default function ReviewerWorkspace({ token, user, onLogout }) {
           </p>
         </div>
 
-        <button type="button" onClick={onLogout} style={buttonStyle}>
+        <button type="button" onClick={onLogout} className="reviewer-button">
           Sign out
         </button>
       </header>
 
-      {error && (
-        <div
-          role="alert"
-          style={{
-            ...panelStyle,
-            color: '#b42318',
-            borderColor: '#f2b8b5',
-          }}
-        >
-          {error}
-        </div>
-      )}
+      {
+        error && (
+          <div
+            role="alert"
+            style={{
+              ...panelStyle,
+              color: '#b42318',
+              borderColor: '#f2b8b5',
+            }}
+          >
+            {error}
+          </div>
+        )
+      }
 
-      {notice && (
-        <div
-          role="status"
-          style={{
-            ...panelStyle,
-            color: '#166534',
-            borderColor: '#bbf7d0',
-          }}
-        >
-          {notice}
-        </div>
-      )}
+      {
+        notice && (
+          <div
+            role="status"
+            style={{
+              ...panelStyle,
+              color: '#166534',
+              borderColor: '#bbf7d0',
+            }}
+          >
+            {notice}
+          </div>
+        )
+      }
 
-      <section style={panelStyle}>
+      <section className="reviewer-panel">
         <div
           style={{
             display: 'flex',
@@ -223,7 +218,7 @@ export default function ReviewerWorkspace({ token, user, onLogout }) {
             type="button"
             onClick={loadCases}
             disabled={loading}
-            style={buttonStyle}
+            className="reviewer-button"
           >
             {loading ? 'Refreshing…' : 'Refresh cases'}
           </button>
@@ -258,97 +253,99 @@ export default function ReviewerWorkspace({ token, user, onLogout }) {
         )}
       </section>
 
-      {selectedCase && (
-        <>
-          <section style={panelStyle}>
-            <h2>Case details</h2>
-            <p><strong>Case ID:</strong> {selectedCase.case_id}</p>
-            <p><strong>Submission ID:</strong> {selectedCase.submission_id}</p>
-            <p>
-              <strong>Status:</strong>{' '}
-              {STATUS_LABELS[selectedCase.case_status] || selectedCase.case_status}
-            </p>
-            <p><strong>Created:</strong> {selectedCase.created_at
-              ? new Date(selectedCase.created_at).toLocaleString()
-              : 'Not available'}
-            </p>
-          </section>
-
-          <EvidencePanel
-            token={token}
-            cases={cases}
-            selectedCase={selectedCaseId}
-          />
-
-          <section style={panelStyle}>
-            <h2>Submit case decision</h2>
-            <p style={{ color: '#64748b' }}>
-              Review the available evidence and provide a reasoned finding.
-              Submitted decisions are recorded by the backend.
-            </p>
-
-            {selectedCase.case_status !== 'UNDER_INVESTIGATION' ? (
+      {
+        selectedCase && (
+          <>
+            <section className="reviewer-panel">
+              <h2>Case details</h2>
+              <p><strong>Case ID:</strong> {selectedCase.case_id}</p>
+              <p><strong>Submission ID:</strong> {selectedCase.submission_id}</p>
               <p>
-                This case is not under investigation, so a new decision cannot
-                be submitted from this form.
+                <strong>Status:</strong>{' '}
+                {STATUS_LABELS[selectedCase.case_status] || selectedCase.case_status}
               </p>
-            ) : (
-              <form onSubmit={submitDecision}>
-                <label htmlFor="decision-finding">Finding</label>
-                <select
-                  id="decision-finding"
-                  value={finding}
-                  onChange={event => setFinding(event.target.value)}
-                  style={fieldStyle}
-                  required
-                >
-                  {FINDINGS.map(item => (
-                    <option key={item.value} value={item.value}>
-                      {item.label}
-                    </option>
-                  ))}
-                </select>
+              <p><strong>Created:</strong> {selectedCase.created_at
+                ? new Date(selectedCase.created_at).toLocaleString()
+                : 'Not available'}
+              </p>
+            </section>
 
-                <label htmlFor="decision-sanction">
-                  Recommended sanction
-                </label>
-                <input
-                  id="decision-sanction"
-                  value={sanction}
-                  onChange={event => setSanction(event.target.value)}
-                  maxLength={80}
-                  required
-                  style={fieldStyle}
-                />
+            <EvidencePanel
+              token={token}
+              cases={cases}
+              selectedCase={selectedCaseId}
+            />
 
-                <label htmlFor="decision-rationale">Rationale</label>
-                <textarea
-                  id="decision-rationale"
-                  value={rationale}
-                  onChange={event => setRationale(event.target.value)}
-                  minLength={10}
-                  maxLength={10000}
-                  rows={6}
-                  required
-                  placeholder="Explain how the evidence supports your finding."
-                  style={fieldStyle}
-                />
+            <section className="reviewer-panel">
+              <h2>Submit case decision</h2>
+              <p style={{ color: '#64748b' }}>
+                Review the available evidence and provide a reasoned finding.
+                Submitted decisions are recorded by the backend.
+              </p>
 
-                <button
-                  type="submit"
-                  disabled={submitting || !sanction.trim() || rationale.trim().length < 10}
-                  style={{
-                    ...buttonStyle,
-                    opacity: submitting ? 0.65 : 1,
-                  }}
-                >
-                  {submitting ? 'Submitting…' : 'Submit decision'}
-                </button>
-              </form>
-            )}
-          </section>
-        </>
-      )}
-    </main>
+              {selectedCase.case_status !== 'UNDER_INVESTIGATION' ? (
+                <p>
+                  This case is not under investigation, so a new decision cannot
+                  be submitted from this form.
+                </p>
+              ) : (
+                <form onSubmit={submitDecision}>
+                  <label htmlFor="decision-finding">Finding</label>
+                  <select
+                    id="decision-finding"
+                    value={finding}
+                    onChange={event => setFinding(event.target.value)}
+                    style={fieldStyle}
+                    required
+                  >
+                    {FINDINGS.map(item => (
+                      <option key={item.value} value={item.value}>
+                        {item.label}
+                      </option>
+                    ))}
+                  </select>
+
+                  <label htmlFor="decision-sanction">
+                    Recommended sanction
+                  </label>
+                  <input
+                    id="decision-sanction"
+                    value={sanction}
+                    onChange={event => setSanction(event.target.value)}
+                    maxLength={80}
+                    required
+                    style={fieldStyle}
+                  />
+
+                  <label htmlFor="decision-rationale">Rationale</label>
+                  <textarea
+                    id="decision-rationale"
+                    value={rationale}
+                    onChange={event => setRationale(event.target.value)}
+                    minLength={10}
+                    maxLength={10000}
+                    rows={6}
+                    required
+                    placeholder="Explain how the evidence supports your finding."
+                    style={fieldStyle}
+                  />
+
+                  <button
+                    type="submit"
+                    disabled={submitting || !sanction.trim() || rationale.trim().length < 10}
+                    style={{
+                      ...buttonStyle,
+                      opacity: submitting ? 0.65 : 1,
+                    }}
+                  >
+                    {submitting ? 'Submitting…' : 'Submit decision'}
+                  </button>
+                </form>
+              )}
+            </section>
+          </>
+        )
+      }
+    </main >
   );
 }
